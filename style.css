@@ -4,17 +4,18 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     margin: 0;
     padding: 0;
-<<<<<<< Updated upstream
-    font-family: Arial, sans-serif;
-=======
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    background-color: #f5f4ea;
-    color: #000000;
->>>>>>> Stashed changes
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: #f5f5dc;
+    color: #213322;
+    line-height: 1.5;
 }
 
 img {
@@ -30,6 +31,10 @@ h4 {
     font-weight: 600;
 }
 
+p {
+    margin: 0 0 0.75rem 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -42,7 +47,6 @@ a {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 
 
 header {
@@ -62,6 +66,7 @@ header {
     padding: 0;
 }
 
+
 nav {
     background-color: #1a5023;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -78,94 +83,67 @@ nav ul {
 }
 
 .navText {
-    color: white;
-    text-decoration: none;
+    color: #ffffff;
     font-size: 18px;
-<<<<<<< Updated upstream
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-=======
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
->>>>>>> Stashed changes
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: inline-block;
+    padding: 0 4px;
+    border-left: 1px solid #cbe5c5;
+    border-right: 1px solid #cbe5c5;
     transition: color 0.3s, transform 0.3s;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.navText:first-child {
+    border-left: none;
+}
+
+.navText:last-child {
+    border-right: none;
+}
+
 .navText:hover {
-    color: rgb(224, 224, 224);
-    transform: scale(1.1);
+    color: #e0e0e0;
+    transform: scale(1.08);
 }
-
-<<<<<<< Updated upstream
-footer {
-    padding: 40px 20px;
-    border-top: 1px solid #000;
-    display: flex;
-    justify-content: center;
-}
-
-
-.footer-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    width: 600px;
-}
-
-.opening h2 {
-    margin: 0 0 10px 0;
-    font-size: 22px;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    margin: 4px 0;
-}
-
-.contact p {
-    margin: 4px 0;
-}
-
-#background{
-    width: 100%;
-=======
 
 
 .hero {
     position: relative;
-    height: 420px;
-    background-image: url("images/hero-bloemen.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    width: 100%;
+    min-height: 420px;
     overflow: hidden;
 }
 
-.hero::after {
-    content: "";
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.4),
             rgba(0, 0, 0, 0.4));
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
     padding: 0 20px;
 }
 
 .hero-title {
-    font-size: 40px;
+    font-size: 38px;
     margin-bottom: 10px;
 }
 
@@ -174,192 +152,277 @@ footer {
 }
 
 
-
-.tagline-bar {
-    background-color: #305f34;
-    color: white;
+.section-bar {
+    background-color: #2f6d39;
+    color: #ffffff;
     text-align: center;
-    padding: 18px 10px;
-    font-size: 22px;
+    padding: 16px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 
-
-.highlights {
-    background-color: #f7f6e7;
-    padding: 40px 0 60px;
+.highlight-section {
+    padding: 30px 0 50px 0;
 }
 
-.flower-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px;
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
 }
 
-.flower-card {
-    width: 230px;
-    border-radius: 8px;
-    background-color: #ffffff;
+.product-card {
+    background-color: #f5f5dc;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-card-caption {
+    background-color: #e3f1b8;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.product-card-caption span {
+    display: block;
+}
+
+
+.about-section {
+    background-color: #2f6d39;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.about-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.about-title {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.about-photo {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.assortment-page {
+    padding: 40px 0 60px 0;
+}
+
+.assortment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+.assortment-item {
+    background-color: #f5f5dc;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
 }
 
-.flower-card img {
-    height: 160px;
+.assortment-item.large {
+    grid-column: span 2;
+}
+
+.assortment-item img {
+    width: 100%;
+    height: 210px;
     object-fit: cover;
 }
 
-.flower-info {
-    background-color: #e6f2c6;
-    padding: 12px 10px 16px;
+.assortment-caption {
+    background-color: #e3f1b8;
     text-align: center;
+    padding: 10px;
     font-size: 14px;
 }
 
-.flower-info .flower-name {
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.flower-info .flower-price {
-    font-size: 13px;
+.assortment-caption span {
+    display: block;
 }
 
 
-
-.about-section {
-    background-color: #305f34;
-    color: white;
-    padding: 55px 0;
+.contact-page {
+    background-color: #2f6d39;
+    color: #ffffff;
+    padding: 60px 0 80px 0;
 }
 
-.about-inner {
-    display: flex;
+.contact-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.6fr);
     gap: 40px;
-    align-items: stretch;
+    align-items: flex-start;
 }
 
-.about-text {
-    flex: 2;
-    font-size: 14px;
-    line-height: 1.6;
+.contact-text {
+    font-size: 15px;
 }
 
-.about-text h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.about-text p {
+.contact-text p {
     margin-bottom: 8px;
 }
 
-.about-photo-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-details p {
+    margin: 4px 0;
 }
 
-.about-photo-card {
-    background-color: #f7f6e7;
+
+.contact-form-wrapper {
+    background-color: #f5f5dc;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form textarea,
+.contact-form input[type="email"],
+.contact-form input[type="text"] {
+    width: 100%;
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
 }
 
-.about-photo-card img {
-    border-radius: 8px;
+.contact-form textarea {
+    min-height: 150px;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #e3f1b8;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.contact-form button:hover {
+    background-color: #d2e394;
+    transform: translateY(-1px);
 }
 
 
-
-.footer-top {
-    background-color: #f5f4ea;
-    padding: 35px 0 40px;
+footer {
+    padding: 40px 20px;
+    background-color: #1a5023;
+    color: #ffffff;
+    margin-top: 0;
 }
 
-.footer-inner {
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.contact {
+    font-size: 14px;
+}
+
+.contact p {
+    margin: 4px 0;
+}
+
+
+.opening h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+.opening p {
+    margin: 4px 0;
+}
+
+.row {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    font-size: 14px;
-}
-
-.footer-block-title {
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.footer-contact p,
-.footer-hours p {
-    margin: 2px 0;
-}
-
-.footer-contact span.label {
-    display: inline-block;
-    width: 70px;
-    font-weight: 600;
-}
-
-/* Opening hours heading */
-.footer-hours-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    width: 220px;
+    margin: 4px 0;
 }
 
 
-
-.footer-bottom {
-    background-color: #2f6d39;
-    color: #e6f2c6;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
+#background {
+    width: 100%;
 }
-
 
 
 @media (max-width: 900px) {
-    .about-inner {
-        flex-direction: column;
+
+    .about-inner,
+    .contact-layout,
+    .footer-container {
+        grid-template-columns: 1fr;
     }
 
-    .about-photo-wrapper {
-        order: -1;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 650px) {
-    nav ul {
-        gap: 25px;
-        font-size: 16px;
-    }
-
-    .hero {
-        height: 320px;
+    .assortment-item.large {
+        grid-column: span 1;
     }
 
     .hero-title {
         font-size: 30px;
     }
+}
 
-    .hero-subtitle {
+@media (max-width: 600px) {
+    nav ul {
+        gap: 20px;
         font-size: 16px;
     }
 
-    .flower-card {
-        width: 90%;
-        max-width: 280px;
+    .hero {
+        min-height: 320px;
     }
->>>>>>> Stashed changes
+
+    .contact-form-wrapper {
+        padding: 18px;
+    }
 }
