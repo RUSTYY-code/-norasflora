@@ -425,6 +425,10 @@ footer {
   display: block;      
 }
 
+.assortment-bg {
+  background-color: #D9EDB5;
+}
+
 @media (max-width: 900px) {
 
     .about-inner,
@@ -455,4 +459,128 @@ footer {
     .contact-form-wrapper {
         padding: 18px;
     }
+}
+
+.welcome-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: "Segoe UI", "Poppins", "Helvetica Neue", sans-serif;
+}
+
+.welcome-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.welcome-section .last-text {
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.welcome-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    color: #ffffff;
+    font-family: "Segoe UI", "Poppins", sans-serif;
+}
+
+.welcome-text {
+    max-width: 520px;
+}
+
+.welcome-text h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.welcome-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+.welcome-image {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+.welcome-image img {
+    width: 260px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+}
+
+
+.welcome-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    color: #ffffff;
+    font-family: "Segoe UI", "Poppins", sans-serif;
+}
+
+.welcome-section {
+    background-color: #4f6b4f;
+}
+
+
+.footer-info {
+    background-color: #3f573f;
+    color: #ffffff;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: "Segoe UI", "Poppins", sans-serif;
+}
+
+.footer-wrapper h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.footer-wrapper p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.welcome-section {
+    background-color: #4f6b4f;
+}
+
+.footer-info {
+    background-color: #3f573f;
+    color: #ffffff;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
